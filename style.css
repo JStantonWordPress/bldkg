@@ -1,0 +1,14 @@
+body,
+html { height: 100%; margin: 0; padding: 0; }
+html { box-sizing: border-box; }
+*,
+*:before,
+*:after { box-sizing: inherit; }
+body { background-image: url('https://www.blkdg.com/wp-content/uploads/2020/12/blkdg_260601056-1024x684.jpg'); background-size: cover; background-repeat: no-repeat; box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 48%); font-family: 'Roboto Condensed', sans-serif; }
+#mainForm { border: 2px solid #fff; padding: 30px; width: 400px; margin: 0px auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#mainForm h2 { text-align: center; color: #fff; text-transform: uppercase; font-weight: 400; margin-bottom: 25px; }
+.form-label { display: block; margin-top: 20px; margin-bottom: 3px; color: #fff; font-weight: 400; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; }
+#mainForm input { width: 100%; padding: 10px; }
+#mainForm button { color: #fff; padding: 10px; border: none; border: 1px solid #fff; font-size: 18px; background-color: rgba(0, 0, 0, 0.3); width: 100%; margin-top: 20px; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; cursor: pointer; }
+.error { margin-top: 0px; color: red; display: table; margin-top: 3px; }
+.copyWrapper { position: absolute; color: white; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid #fff; padding: 20px; width: 400px; text-align: center; }
