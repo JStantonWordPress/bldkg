@@ -9,16 +9,16 @@
 <body>
     
 <?php
-
 $conn = mysqli_connect("localhost", "root", "root", "blkdg");
 if($conn === false){
     die("Error Connection. " 
         . mysqli_connect_error());
 }
-$first =  $_REQUEST['first'];
-$last = $_REQUEST['last'];
-$email = $_REQUEST['email'];
-$password = $_REQUEST['password'];
+$first =  filter_var($_REQUEST['first'], FILTER_SANITIZE_STRING);
+$last = filter_var($_REQUEST['last'], FILTER_SANITIZE_STRING);
+$email = filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL);
+$password = filter_var($_REQUEST['password'], FILTER_SANITIZE_STRING);
+
 $sql = "INSERT INTO users VALUES ('$first','$last','$email','$password')";
 
 if(mysqli_query($conn, $sql)){ ?>
@@ -29,7 +29,7 @@ if(mysqli_query($conn, $sql)){ ?>
   </div>
 
 <?php } else{ ?>
-        <?php mysqli_error($conn); ?>
+  <?php mysqli_error($conn); ?>
 <?php }
 mysqli_close($conn);
 ?>
